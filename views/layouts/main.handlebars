@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fund My Project!</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js"></script>
+</head>
+
+<body>
+  <div class="flex-column justify-space-around">
+    <nav class="p-5">
+        <!-- Conditionally render login or logout links -->
+
+        <a href="/" class="no-button">Home</a> |
+        <a href="/profile" class="no-button">Dashboard</a> |
+        {{#if logged_in}}
+        <a href="/profile" class="no-button">Profile</a> |
+        <button class="no-button p-5" id="logout">Logout</button>
+        {{else}}
+        <a href="/login" class="no-button">Login</a>
+        {{/if}}
+      </nav>
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <iconify-icon icon="simple-line-icons:briefcase" class="pl-5 pr-1"></iconify-icon>
+
+        <a href="/">The Tech Blog</a>
+      </h1>
+      
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
