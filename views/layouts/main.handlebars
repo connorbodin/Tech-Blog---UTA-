@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  
   <div class="flex-column justify-space-around">
     <nav class="p-5">
         <!-- Conditionally render login or logout links -->
@@ -43,7 +44,9 @@
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
+
   <script src="/js/logout.js"></script>
+  <script src="/js/project.js"></script>
   {{/if}}
 </body>
 
