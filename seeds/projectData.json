@@ -1,17 +1,34 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
+    "name": "Why MVC is so important",
+    "description": "MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the View layer for design, and the Controller layer for application logic."
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "name": "Authentication vs. Authorization",
+    "description": "There is a difference between authentication and authorization. Authentication means confirming your own identity, whereas authorization means being allowed access to the system."
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "name": "Object-Relational Mapping",
+    "description": "I have really loved learning about ORMs. It's really simplified the way I create queries in SQL!"
+  },
+  {
+    "name": "The Power of CSS Grid",
+    "description": "CSS Grid is a powerful tool for creating complex layouts on the web. With just a few lines of code, you can create sophisticated designs that adapt to different screen sizes and devices."
+  },
+  {
+    "name": "The Benefits of Test-Driven Development",
+    "description": "Test-Driven Development (TDD) is a software development process that emphasizes writing automated tests before writing the actual code. TDD can lead to more reliable and maintainable code."
+  },
+  {
+    "name": "Why Accessibility Matters",
+    "description": "Accessibility is a crucial consideration when building websites and applications. Ensuring that your content is accessible to all users can improve user experience."
+  },
+  {
+    "name": "The Art of Debugging",
+    "description": "Debugging is a crucial skill for any developer. Knowing how to identify and fix bugs can save you hours of frustration and help you create more stable, reliable software."
+  },
+  {
+    "name": "Introduction to Functional Programming",
+    "description": "Functional programming is a programming paradigm that emphasizes writing code in terms of mathematical functions. Functional programming languages like Clojure are becoming increasingly popular."
   }
 ]
