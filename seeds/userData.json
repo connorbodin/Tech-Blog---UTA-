@@ -13,5 +13,50 @@
     "name": "Amiko",
     "email": "amiko2k20@aol.com",
     "password": "password12345"
+  },
+  {
+    "name": "John",
+    "email": "john.doe@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Alice",
+    "email": "alice.smith@yahoo.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Mark",
+    "email": "mark_jones@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Emily",
+    "email": "emily.brown@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Jacob",
+    "email": "jacob.williams@yahoo.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Sophia",
+    "email": "sophia.hernandez@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "William",
+    "email": "william_taylor@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Ella",
+    "email": "ella.garcia@yahoo.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Daniel",
+    "email": "daniel.martinez@aol.com",
+    "password": "password12345"
   }
 ]

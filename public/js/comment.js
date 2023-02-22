@@ -9,21 +9,21 @@ const toggleComment = () => {
     event.preventDefault();
   
     const content = document.querySelector('#commentBody').value.trim();
-    const project_id = document.querySelector('#comment-submit').getAttribute('data-id');
-    console.log(project_id)
+    const post_id = document.querySelector('#comment-submit').getAttribute('data-id');
+    console.log(post_id)
   
   
-    if (content && project_id) {
+    if (content && post_id) {
         const response = await fetch(`/api/comments`, {
             method: 'POST',
-            body: JSON.stringify({ content, project_id }),
+            body: JSON.stringify({ content, post_id }),
             headers: {
                 'Content-Type': 'application/json',
             },
         });
         
         if (response.ok) {
-            document.location.replace(`/project/${project_id}`);
+            document.location.replace(`/post/${post_id}`);
         } else {
             alert('failed to post')
         }
