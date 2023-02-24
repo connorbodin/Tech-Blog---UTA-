@@ -38,13 +38,24 @@ router.delete('/:id', withAuth, async (req, res) => {
 });
 
 // router.get all comments 
-router.get('/', async (req, res) => {
-    // find all categories
-    // be sure to include its associated Products
-   const commentData = await Comment.findAll({}).catch((err) => {
-      res.json(err);
-    });
-    res.json(commentData);
+router.delete('/:id', async (req, res) => {
+    // delete a category by its `id` value
+    try {
+      const commentData = await Comment.destroy({
+        where: {
+          id: req.params.id
+        }
+      });
+  
+      if (!commentData) {
+        res.status(404).json({ message: 'No category found with this id!' });
+        return;
+      }
+  
+      res.status(200).json(commentData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
   });
 
 
