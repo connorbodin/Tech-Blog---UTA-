@@ -16,5 +16,37 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
+// delete comment by id 
+router.delete('/:id', withAuth, async (req, res) => {
+    try {
+        const commentData = await Comment.destroy({
+            where: {
+                id: req.params.id,
+                user_id: req.session.user_id
+            }
+        });
+
+        if (!commentData) {
+            res.status(404).json({ message: 'No comment found with this id!' });
+            return;
+        }
+
+        res.status(200).json(commentData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+// router.get all comments 
+router.get('/', async (req, res) => {
+    // find all categories
+    // be sure to include its associated Products
+   const commentData = await Comment.findAll({}).catch((err) => {
+      res.json(err);
+    });
+    res.json(commentData);
+  });
+
+
 
 module.exports = router

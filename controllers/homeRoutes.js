@@ -40,7 +40,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
           attributes: ['content', 'user_id', 'date_created'],
           include: [
             {
-              model: User,
+              model: User,  
               attributes: ['name']
             }
           ]

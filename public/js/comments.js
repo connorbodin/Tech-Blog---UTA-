@@ -3,7 +3,7 @@ const toggleComment = () => {
   const commentButton= document.getElementById('comment')
   commentButton.style.display = 'none';
   commentForm.style.display = 'block';
-}
+};
 
 const newCommentHandler = async (event) => {
   event.preventDefault();
@@ -27,6 +27,25 @@ const newCommentHandler = async (event) => {
       } else {
           alert('failed to post')
       }
+  }
+};
+
+// delete comment from comment 
+const deleteCommentHandler = async (event) => {
+    event.preventDefault();
+
+  if (event.target.documentById('comment-delete')) {
+    const id = event.target.getAttribute('data-id');
+
+    const response = await fetch(`/api/comments/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace(`/post/${post_id}`);
+    } else {
+      alert('Failed to delete comment');
+    }
   }
 };
 
