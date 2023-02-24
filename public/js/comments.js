@@ -31,23 +31,23 @@ const newCommentHandler = async (event) => {
 };
 
 // delete comment from comment 
-const deleteCommentHandler = async (event) => {
-    event.preventDefault();
+// const deleteCommentHandler = async (event) => {
+//     event.preventDefault();
 
-  if (event.target.documentById('comment-delete')) {
-    const id = event.target.getAttribute('data-id');
+//   if (event.target.documentById('comment-delete')) {
+//     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/comments/${id}`, {
-      method: 'DELETE',
-    });
+//     const response = await fetch(`/api/comments/${id}`, {
+//       method: 'DELETE',
+//     });
 
-    if (response.ok) {
-      document.location.replace(`/post/${post_id}`);
-    } else {
-      alert('Failed to delete comment');
-    }
-  }
-};
+//     if (response.ok) {
+//       document.location.replace(`/post/${post_id}`);
+//     } else {
+//       alert('Failed to delete comment');
+//     }
+//   }
+// };
 
 document
 .querySelector('#comment-form')

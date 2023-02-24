@@ -17,46 +17,46 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 // delete comment by id 
-router.delete('/:id', withAuth, async (req, res) => {
-    try {
-        const commentData = await Comment.destroy({
-            where: {
-                id: req.params.id,
-                user_id: req.session.user_id
-            }
-        });
+// router.delete('/:id', withAuth, async (req, res) => {
+//     try {
+//         const commentData = await Comment.destroy({
+//             where: {
+//                 id: req.params.id,
+//                 user_id: req.session.user_id
+//             }
+//         });
 
-        if (!commentData) {
-            res.status(404).json({ message: 'No comment found with this id!' });
-            return;
-        }
+//         if (!commentData) {
+//             res.status(404).json({ message: 'No comment found with this id!' });
+//             return;
+//         }
 
-        res.status(200).json(commentData);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+//         res.status(200).json(commentData);
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
-// router.get all comments 
-router.delete('/:id', async (req, res) => {
-    // delete a category by its `id` value
-    try {
-      const commentData = await Comment.destroy({
-        where: {
-          id: req.params.id
-        }
-      });
+// // router.get all comments 
+// router.delete('/:id', async (req, res) => {
+//     // delete a category by its `id` value
+//     try {
+//       const commentData = await Comment.destroy({
+//         where: {
+//           id: req.params.id
+//         }
+//       });
   
-      if (!commentData) {
-        res.status(404).json({ message: 'No category found with this id!' });
-        return;
-      }
+//       if (!commentData) {
+//         res.status(404).json({ message: 'No category found with this id!' });
+//         return;
+//       }
   
-      res.status(200).json(commentData);
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+//       res.status(200).json(commentData);
+//     } catch (err) {
+//       res.status(500).json(err);
+//     }
+//   });
 
 
 
