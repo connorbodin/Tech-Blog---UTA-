@@ -36,8 +36,7 @@ A tech blog application that allows you to comment on posts. Still working on th
 
 ## Setup
 
-N/A
-
+https://tech-blog-uta-bootcamp.herokuapp.com/ 
 
 ## Contributors
 
